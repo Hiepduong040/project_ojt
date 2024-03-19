@@ -1,0 +1,74 @@
+body {
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  margin-top: 50px;
+  background-color: #f0fff0;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 128, 0, 0.2);
+  width: 400px;
+  height: 860px;
+}
+
+.form-control {
+  border-radius: 0;
+}
+
+h3.text-center {
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #008000;
+}
+
+#userNameError,
+#emailError,
+#passwordError,
+#rePasswordError {
+  margin-top: 5px;
+  font-size: 14px;
+  display: none;
+  color: #008000;
+}
+
+.checkBox {
+  margin-top: 10px;
+}
+
+.btn-primary {
+  background-color: #008000;
+  border-color: #008000;
+  border-radius: 0;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #006400;
+  border-color: #006400;
+}
+
+.text-center mt-2 a {
+  color: #008000;
+  transition: color 0.3s;
+}
+
+.text-center mt-2 a:hover {
+  text-decoration: none;
+  color: #006400;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.container {
+  animation: fadeIn 0.5s;
+}
