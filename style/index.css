@@ -594,3 +594,28 @@ section {
   height: 3rem;
 }
 /* footer */
+
+.cartContainerMain {
+  text-align: center;
+  margin-top: 110px;
+  font-size: 15px;
+}
+
+#tableCart span {
+  display: flex;
+  font-size: 15px;
+  gap: 30px;
+  justify-content: center;
+}
+
+#tableCart span button {
+  background-color: rgb(244, 18, 18);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+#tfootCart {
+  display: flex;
+  margin-left: 1150px;
+}

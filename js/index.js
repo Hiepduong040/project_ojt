@@ -98,49 +98,55 @@
     //   {
     //     image:"./assets/images/product-1.png",
     //     name:"Cam",
-    //     price:"30.000 VNĐ",
+    //     price:20,
     //     id:1,
-    //     stock:20
+    //     stock:20,
+    //     totalPrice: 0,
     //   },
 
     //   {
     //     image:"./assets/images/product-2.png",
-    //     name:"Xoài",
-    //     price:"25.000 VNĐ",
+    //     name:"Hành khô",
+    //     price:55,
     //     id:2,
-    //     stock:30
+    //     stock:30,
+    //     totalPrice: 0,
     //   },
 
     //   {
     //     image:"./assets/images/product-3.png",
-    //     name:"Mận",
-    //     price:"35.000 VNĐ",
+    //     name:"Thịt tươi",
+    //     price:80,
     //     id:3,
-    //     stock:10
+    //     stock:10,
+    //     totalPrice: 0,
     //   },
 
     //   {
     //     image:"./assets/images/product-4.png",
-    //     name:"Bưởi",
-    //     price:"40.000 VNĐ",
+    //     name:"Cải bắp",
+    //     price:40,
     //     id:4,
-    //     stock:50
+    //     stock:50,
+    //     totalPrice: 0,
     //   },
 
     //   {
     //     image:"./assets/images/product-5.png",
-    //     name:"Nhãn",
-    //     price:"50.000 VNĐ",
+    //     name:"Khoai tây",
+    //     price:50,
     //     id:5,
-    //     stock:47
+    //     stock:47,
+    //     totalPrice: 0,
     //   },
 
     //   {
     //     image:"./assets/images/product-6.png",
-    //     name:"Nho",
-    //     price:"60.000 VNĐ",
+    //     name:"Bơ",
+    //     price:60,
     //     id:6,
-    //     stock:4
+    //     stock:4,
+    //     totalPrice: 0,
     //   },
     // ]
 
@@ -155,6 +161,11 @@
 
     // function render product
 
+    // document.getElementsByClassName("btn").addEventListener("click",function(e)  {
+    //   e.preventDefault();
+    //   renderProduct();
+    // }
+// )
     function renderProduct() {
       let element=""
       for(let i = 0 ; i< products.length; i++){
@@ -163,7 +174,7 @@
           <div class="swiper-slide box">
           <img src="${products[i].image}" alt="" />
           <h1>${products[i].name}</h1>
-          <div class="price">${products[i].price}</div>
+          <div class="price">${products[i].price}.000 VNĐ</div>
           <div class="stars">
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>
@@ -171,9 +182,8 @@
             <i class="fa fa-star"></i>
             <i class="fa fa-star-half"></i>
           </div>
-          <a href="#" class="btn" onclick="addToCart(${products[i].id})">thêm vào giỏ</a>
+          <a class="btn" onclick="addToCart(${products[i].id})">thêm vào giỏ</a>
         </div>
-
         `
       }
       // console.log("1111111",element);

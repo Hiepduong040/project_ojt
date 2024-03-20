@@ -6,90 +6,113 @@
     <title>cart website</title>
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../style/cart.css" />
+    <link rel="stylesheet" href="../style/index.css" />
   </head>
   <body>
+    <!-- header section -->
+    <header class="header">
+      <a href="../index.html" class="logo">
+        <i class="fa fa-shopping-basket"></i>BACH HOA XANH</a
+      >
+
+      <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#features">features</a>
+        <a href="#products">products</a>
+        <a href="#categories">categories</a>
+        <a href="#review">review</a>
+        <a href="#blogs">contact</a>
+      </nav>
+
+      <form class="search-form">
+        <input type="search" id="search-box" placeholder="search here....." />
+        <label for="search-box" class="fa fa-search"></label>
+      </form>
+    </header>
+
     <div class="cartContainerMain" id="cartContainerMain">
       <div class="quantityCart">
         <h1 id="totalCart">Giỏ hàng</h1>
-        <!-- <h3>Tổng sản phẩm của bạn là: <span>3</span></h3> -->
-        <table class="table table-success">
+
+        <table id="tableCart" class="table table-success">
           <thead>
             <tr>
-              <th scope="col">#</th>
+              <th scope="col">STT</th>
               <th scope="col">Tên</th>
               <th scope="col">Ảnh</th>
               <th scope="col">Giá</th>
-              <th scope="col">Số lượng</th>
-              <th scope="col">Có sẵn</th>
+              <th scope="col" id="quantityCurrent">Số lượng</th>
+              <th scope="col">Thành tiền</th>
+              <th scope="col">Xóa</th>
             </tr>
           </thead>
-          <tbody id="bodyCart">
-            <!-- <tr>
-              <th scope="row">1</th>
-              <td>Cam</td>
-              <td>
-                <img
-                  style="width: 50px; height: 50px"
-                  src="../assets/images/product-1.png"
-                  alt=""
-                />
-              </td>
-              <td>40.000VNĐ</td>
-              <td>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                  ><button>+</button>&nbsp;&nbsp;&nbsp;<button>-</button></span
-                >
-              </td>
-              <td>10</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Quyts</td>
-              <td>
-                <img
-                  style="width: 50px; height: 50px"
-                  src="../assets/images/product-2.png"
-                  alt=""
-                />
-              </td>
-              <td>50.000VNĐ</td>
-              <td>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                  ><button>+</button>&nbsp;&nbsp;&nbsp;<button>-</button></span
-                >
-              </td>
-              <td>10</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Cam</td>
-              <td>
-                <img
-                  style="width: 50px; height: 50px"
-                  src="../assets/images/product-3.png"
-                  alt=""
-                />
-              </td>
-              <td>60.000VNĐ</td>
-              <td>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                  ><button>+</button>&nbsp;&nbsp;&nbsp;<button>-</button></span
-                >
-              </td>
-              <td>10</td>
-            </tr> -->
-          </tbody>
+
+          <tbody id="bodyCart"></tbody>
         </table>
       </div>
     </div>
+    <div id="tfootCart">122</div>
+
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>Bach Hoa Xanh <i class="fa fa-shopping-basket"></i></h3>
+          <p>Mang lại bữa cơm ngon cho người Việt</p>
+          <div class="share">
+            <a href="" class="fa fa-facebook fa-2x"></a>
+            <a href="" class="fa fa-instagram fa-2x"></a>
+            <a href="" class="fa fa-twitter fa-2x"></a>
+            <a href="" class="fa fa-linkedin fa-2x"></a>
+          </div>
+        </div>
+        <div class="box">
+          <h3>Contact</h3>
+          <div class="links">
+            <a href="" class="fa fa-phone">+84978886666</a>
+            <a href="" class="fa fa-phone">+84978886666</a>
+            <a href="" class="fa fa-envelope">info@example.com</a>
+            <a href="" class="fa fa-map-marker">Nguyen Trai Ha Noi Viet Nam</a>
+          </div>
+        </div>
+        <div class="box">
+          <h3>Quick links</h3>
+          <a href="" class="links"> <i class="fa fa-arrow-right"></i>home</a>
+          <a href="" class="links">
+            <i class="fa fa-arrow-right"></i>features</a
+          >
+          <a href="" class="links">
+            <i class="fa fa-arrow-right"></i>products</a
+          >
+          <a href="" class="links">
+            <i class="fa fa-arrow-right"></i>categories</a
+          >
+          <a href="" class="links"> <i class="fa fa-arrow-right"></i>review</a>
+          <a href="" class="links"> <i class="fa fa-arrow-right"></i>blogs</a>
+        </div>
+        <div class="box">
+          <h3>Newsletter</h3>
+          <p>Để lại thông tin để nhận được nhiều khuyến mãi sớm nhất</p>
+          <input type="email" placeholder="Your Email" class="email" />
+          <input type="submit" value="Subscrice" class="btn" />
+        </div>
+      </div>
+    </section>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <script src="../js/cart.js"></script>
   </body>
 </html>

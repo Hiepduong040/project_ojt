@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header .navbar {
+  display: inline-block;
+  margin-left: 780px;
+  margin-top: 15px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+
+  background-color: rgb(34, 34, 34);
+  position: absolute;
+
+  gap: 20px;
+
+  box-shadow: 0px 2px 0px #c4c3c3;
+}
+
+.header .logo {
+  flex: 1;
+  color: green;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.header .navbar a {
+  margin-right: 50px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.header .navbar a:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.adminHeader {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  background-color: rgb(34, 34, 34);
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.headerColumn {
+  margin-left: 0px;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  justify-content: space-between;
+  background-color: #f1f1f1;
+  width: 150px;
+  height: 300px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.headerColumn .logGoTool {
+  font-size: 22px;
+}
+
+.headerColumn .userControl {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.headerColumn .productControl {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.headerColumn .logOutAdmin {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.headerColumn .contentLogout {
+  margin-left: 14px;
+}
+
+.headerColumn .contentProductControl {
+  margin-left: 14px;
+}
+
+.headerColumn .contentUserControl {
+  margin-left: 14px;
+}
