@@ -93,64 +93,70 @@
     tạo 1 magr chứ danh sách sản phẩm quản lý product
   */ 
 
-    // let products = [
+    let products = [
       
-    //   {
-    //     image:"./assets/images/product-1.png",
-    //     name:"Cam",
-    //     price:"30.000 VNĐ",
-    //     id:1,
-    //     stock:20
-    //   },
+      {
+        image:"./assets/images/product-1.png",
+        name:"Cam",
+        price:20,
+        id:1,
+        stock:20,
+        totalPrice: 0,
+      },
 
-    //   {
-    //     image:"./assets/images/product-2.png",
-    //     name:"Xoài",
-    //     price:"25.000 VNĐ",
-    //     id:2,
-    //     stock:30
-    //   },
+      {
+        image:"./assets/images/product-2.png",
+        name:"Hành khô",
+        price:55,
+        id:2,
+        stock:30,
+        totalPrice: 0,
+      },
 
-    //   {
-    //     image:"./assets/images/product-3.png",
-    //     name:"Mận",
-    //     price:"35.000 VNĐ",
-    //     id:3,
-    //     stock:10
-    //   },
+      {
+        image:"./assets/images/product-3.png",
+        name:"Thịt tươi",
+        price:80,
+        id:3,
+        stock:10,
+        totalPrice: 0,
+      },
 
-    //   {
-    //     image:"./assets/images/product-4.png",
-    //     name:"Bưởi",
-    //     price:"40.000 VNĐ",
-    //     id:4,
-    //     stock:50
-    //   },
+      {
+        image:"./assets/images/product-4.png",
+        name:"Cải bắp",
+        price:40,
+        id:4,
+        stock:50,
+        totalPrice: 0,
+      },
 
-    //   {
-    //     image:"./assets/images/product-5.png",
-    //     name:"Nhãn",
-    //     price:"50.000 VNĐ",
-    //     id:5,
-    //     stock:47
-    //   },
+      {
+        image:"./assets/images/product-5.png",
+        name:"Khoai tây",
+        price:50,
+        id:5,
+        stock:47,
+        totalPrice: 0,
+      },
 
-    //   {
-    //     image:"./assets/images/product-6.png",
-    //     name:"Nho",
-    //     price:"60.000 VNĐ",
-    //     id:6,
-    //     stock:4
-    //   },
-    // ]
+      {
+        image:"./assets/images/product-6.png",
+        name:"Bơ",
+        price:60,
+        id:6,
+        stock:4,
+        totalPrice: 0,
+      },
+    ]
 
     // Lưu data lên localStorage
 
-    // localStorage.setItem("products",JSON.stringify(products));
+    localStorage.setItem("products",JSON.stringify(products));
 
     // lấy dữ liệu về đi render
 
-    let products = JSON.parse(localStorage.getItem("products"));
+    // let products = JSON.parse(localStorage.getItem("products"));
     // console.log(products);
 
     // function render product
@@ -163,7 +169,7 @@
           <div class="swiper-slide box">
           <img src="${products[i].image}" alt="" />
           <h1>${products[i].name}</h1>
-          <div class="price">${products[i].price}</div>
+          <div class="price">${products[i].price}.000 VNĐ</div>
           <div class="stars">
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>
