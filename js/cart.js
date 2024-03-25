@@ -2,7 +2,6 @@ function renderTableCart() {
   let users = JSON.parse(localStorage.getItem("users"));
   let checkLogin = JSON.parse(localStorage.getItem("check-login"));
   let totalBill = 0;
-  
   for (let i = 0; i < users.length; i++) {
     if (users[i].userId == checkLogin) {
       let element = "";
@@ -31,15 +30,12 @@ function renderTableCart() {
           </tr>
         `;
         totalBill += users[i].cart[j].totalPrice;
-      }
-      
-      document.getElementById("bodyCart").innerHTML = element;
-      
+      }   
+      document.getElementById("bodyCart").innerHTML = element;   
       let elements = `
         <h3>Tổng bill của bạn là: <span>${totalBill}.000 VNĐ</span></h3>
       `;
       document.getElementById("tfootCart").innerHTML = elements;
-      
       break; // Thoát khỏi vòng lặp vì đã tìm thấy người dùng
     }
   }
@@ -48,7 +44,6 @@ function renderTableCart() {
 function reduceQuantityCart(idItem) {
   let users = JSON.parse(localStorage.getItem("users"));
   let checkLogin = JSON.parse(localStorage.getItem("check-login"));
-  
   for (let i = 0; i < users.length; i++) {
     if (users[i].userId == checkLogin) {
       for (let j = 0; j < users[i].cart.length; j++) {
@@ -108,9 +103,6 @@ function tableBill() {
 }
 tableBill();
 
-
-
-
 function deleteProductCart(idItem) {
   let users = JSON.parse(localStorage.getItem("users"));
   let checkLogin = JSON.parse(localStorage.getItem("check-login"));
@@ -124,8 +116,6 @@ function deleteProductCart(idItem) {
           
           localStorage.setItem("users", JSON.stringify(users));
           renderTableCart();
-            
-          
         }
       }
     }

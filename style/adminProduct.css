@@ -192,6 +192,11 @@ input {
   color: #333;
 }
 
+#btnProductAdminColor {
+  background-color: #f1f1f1d2;
+  color: #000000;
+}
+
 .tableUser th,
 .tableUser td {
   background-color: #fff;

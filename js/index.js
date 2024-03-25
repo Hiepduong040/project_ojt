@@ -1,99 +1,47 @@
   let searchForm = document.querySelector(".search-form");
-
   document.querySelector("#search-btn").onclick = () =>
   {
     searchForm.classList.toggle("active");
   };
-
-
-
-  // let shoppingCart = document.querySelector(".shopping-cart");
-
-  // document.querySelector("#cart-btn").onclick = () =>
-  // {
-  //     shoppingCart.classList.toggle("active");
-  // };
-
-
-
-
   var swiper = new Swiper(".review-slider", {
     loop:true,
     spaceBetween: 10,
-    
     autoplay:{
         delay: 7500,
         disableOnInteraction: false,
-
     },
-
-
-
     breakpoints: {
       0: {
         slidesPerView: 1,
-        
       },
       768: {
         slidesPerView: 2,
-        
       },
       1020: {
         slidesPerView: 3,
-        
       },
     },
   });
-
-
   var swiper = new Swiper(".product-slider", {
     loop:true,
     spaceBetween: 10,
-    
     autoplay:{
         delay: 7500,
         disableOnInteraction: false,
-
     },
-
-
-
     breakpoints: {
       0: {
         slidesPerView: 1,
-        
       },
       768: {
         slidesPerView: 2,
-        
       },
       1020: {
         slidesPerView: 3,
-        
       },
     },
   });
-
-
-  //   const user_login = JSON.parse(localStorage.getItem("userLogin"));
-
-  //   const user_login_element = document.getElementById("user-login");
-
-  //   if (user_login ){
-  //     user_login_element.innerHTML = user_login.userName;
-    
-  //   }else{
-  //     user_login_element.innerHTML = "";
-  //   }
-
-
-
-
-  /*    
-    tạo 1 magr chứ danh sách sản phẩm quản lý product
-  */ 
-
-    // let products = [
+   // let products = [
       
     //   {
     //     image:"./assets/images/product-1.png",
@@ -150,51 +98,34 @@
     //   },
     // ]
 
-    // Lưu data lên localStorage
-
-    // localStorage.setItem("products",JSON.stringify(products));
-
-    // lấy dữ liệu về đi render
-
+     // localStorage.setItem("products",JSON.stringify(products));
     let products = JSON.parse(localStorage.getItem("products"));
-    // console.log(products);
-
-    // function render product
-
-    // document.getElementsByClassName("btn").addEventListener("click",function(e)  {
-    //   e.preventDefault();
-    //   renderProduct();
-    // }
-// )
+    
     function renderProduct() {
       let element=""
       for(let i = 0 ; i< products.length; i++){
         element += `
                     
-          <div class="swiper-slide box">
-          <img src="${products[i].image}" alt="" />
-          <h1>${products[i].name}</h1>
-          <div class="price">${products[i].price}.000 VNĐ</div>
-          <div class="stars">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half"></i>
-          </div>
-          <a class="btn" onclick="addToCart(${products[i].id})">thêm vào giỏ</a>
+        <a href="./pages/detailProduct.html"><div class="swiper-slide box">
+        <img src="${products[i].image}" alt="" />
+        <h1>${products[i].name}</h1>
+        <div class="price">${products[i].price}.000 VNĐ</div>
+        <div class="stars">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half"></i>
         </div>
+        <a class="btn" onclick="addToCart(${products[i].id})">thêm vào giỏ</a>
+      </div></a>
         `
       }
-      // console.log("1111111",element);
+      
       document.getElementById("products-section").innerHTML = element;
     }
     renderProduct();
-
-    
-
-    // let feedbacks = [
-      
+    // let feedbacks = [   
     //   {
     //     image:"./assets/images/pic-1.png",
     //     feedback:"Lorem, ipsum dolor sit amet consectetur adipisicing elit.Reprehenderit, a? Iure eum aspernatur exercitationem possimus.",
@@ -222,12 +153,7 @@
     // ]
 
     // localStorage.setItem("feedbacks",JSON.stringify(feedbacks));
-
-
     let feedbacks = JSON.parse(localStorage.getItem("feedbacks"));
-    // console.log(feedbacks);
-
-
     function renderFeedback(){
       let element="";
       for(let j = 0; j < feedbacks.length; j++){
@@ -248,14 +174,10 @@
           </div>
         `
       }
-      // console.log("1111111",element);
+     
       document.getElementById("feedback-customer").innerHTML = element;
     }
-
-    //done, còn ${feedbacks[j].name};(tên).
     renderFeedback();
-
-
     // let categories = [
     //   {
     //     image:"./assets/images/cat-1.jpg",
@@ -281,14 +203,7 @@
 
     // localStorage.setItem("categories",JSON.stringify(categories));
 
-
     let categories = JSON.parse(localStorage.getItem("categories"));
-
-
-
-
-
-
     function renderCategories(){
       let element="";
       for(let k = 0; k < categories.length ; k++){
@@ -301,36 +216,21 @@
         </div>
         `
       }
-      
       document.getElementById("box-container-categories").innerHTML = element;
     }
-
     renderCategories();
 
-
-    function nameLogin(){
-      
+    function nameLogin(){     
       let nameUserCurrent = JSON.parse(localStorage.getItem("name-user-current"));
       if(nameUserCurrent==null){
-      console.log("Bạn chưa đăng nhập");
-      return;
+        console.log("Bạn chưa đăng nhập");
+        return;
       }else{
       document.getElementById("btn-current-login").innerText = nameUserCurrent;
-      //done thay tên = local
-
       }
     }
-
     nameLogin();
-
-
-
-    //onclick mua:
     function addToCart(productId) {
-      
-        /*
-        khi nào đăng nhập mới cho mua.
-        */ 
       let checkLogin = JSON.parse(localStorage.getItem("check-login"));
       let users = JSON.parse(localStorage.getItem("users")) ;
       if(checkLogin==null){
@@ -338,26 +238,15 @@
         return;
       }
       console.log("đi mua bthg");
-
       for(let i = 0 ; i < users.length ; i++){
-        
         if(checkLogin == users[i].userId){
           let product = JSON.parse(localStorage.getItem("products"));
-          
           for (let j = 0; j < product.length; j++) {
-            
-            // fix
               if (productId == product[j].id) {
-                  // lấy thông tin sản phẩm
-                  console.log("1111", product[j]);
-                  console.log("giỏ hàng của user sẽ là ", users[i].cart);
-                  //kiểm tra xem trong giỏ hàng có tồn tại sản phẩm đó chưa
-                  //duyệt giỏ hàng
                   let index = users[i].cart.findIndex((item,index)=>{
                     return item.id == productId;
                   })
                   if(index == -1){
-                    //tức là không có
                     console.log("chưa có");
                     users[i].cart.push({...product[j], quantity: 1 });
                     localStorage.setItem("users", JSON.stringify(users));
@@ -369,40 +258,12 @@
                     localStorage.setItem("users", JSON.stringify(users));
                     showQuantityCart()
                   }
-                  
-                  
-                  // sau khi push xong thì lưu trên local
-                  
-
-                  /* 
-                      Trước khi thêm vào giỏ hàng thì kiểm tra xem sản phẩm có trong
-                      giỏ hàng hay chưa
-                      + nếu có thì tăng số lượng
-                      + nếu chưa có thì thêm bình thường
-
-                      thông tin sản phẩm trong giỏ hàng
-                      {
-                          id:"",
-                          name:"",
-                          price:"",
-                          quantity:2
-                      }
-
-                            
-
-                  */
               }
           }
         }
       };
-      
-
-
     };
-
-
   function showQuantityCart(){
-    // lấy giỏ hàng ra.length là được
     let checkLogin = JSON.parse(localStorage.getItem("check-login"));
     let users = JSON.parse(localStorage.getItem("users"));
     for(let i = 0 ; i < users.length ; i++){
@@ -412,7 +273,6 @@
       
     }
   }
-  
   showQuantityCart();
 
 

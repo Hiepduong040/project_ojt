@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <title>Product Admin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../style/adminProduct.css" />
+  <body>
+    <div
+      id="containerSideBar"
+      class="w3-sidebar w3-bar-block w3-black w3-xxlarge"
+      style="width: 170px"
+    >
+      <a id="btnHomeAdminColor" href="#" class="w3-bar-item w3-button"
+        ><i class="fa fa-home">&nbsp;Home</i></a
+      >
+      <a id="btnProductAdminColor" href="#" class="w3-bar-item w3-button"
+        ><i class="fa fa-archive">&nbsp;Product</i></a
+      >
+      <a id="btnNotificationAdminColor" href="#" class="w3-bar-item w3-button"
+        ><i class="fa fa-bell">&nbsp;Notification</i></a
+      >
+      <a id="btnUserAdminColor" href="#" class="w3-bar-item w3-button"
+        ><i class="fa fa-user-circle">&nbsp;User</i></a
+      >
+      <a href="#" class="w3-bar-item w3-button"
+        ><i class="fa fa-sign-out">&nbsp;Logout</i></a
+      >
+    </div>
+
+    <!-- <div style="margin-left: 170px">
+      <div class="w3-container">
+        <h2>Sidebar Icons</h2>
+        <p>In this example we have used icons in the sidebar.</p>
+      </div>
+    </div> -->
+
+    <div class="containerAdminControl">
+      <!-- header -->
+      <header class="header">
+        <div class="adminHeader">ADMIN</div>
+        <!-- <a href=""><div class="fa fa-bars" id="menu-btn"></div></a> -->
+        <a href="#" class="logo">
+          <i class="fa fa-shopping-basket"><span>BACH HOA XANH</span></i></a
+        >
+
+        <nav class="navbar">
+          <a href="#home">Người dùng</a>
+          <a href="#features">Sản phẩm</a>
+          <a href="#products"
+            ><ion-icon id="logoMail" name="mail-outline"></ion-icon
+          ></a>
+          <a href="#products"
+            ><ion-icon
+              id="logoNotifications"
+              name="notifications-outline"
+            ></ion-icon
+          ></a>
+          <a href="#categories"><div class="fa fa-user"></div></a>
+        </nav>
+      </header>
+      <!-- header -->
+
+      <!-- form user -->
+      <div class="formUser">
+        <div class="contentFormUser">Thông tin sản phẩm</div>
+        <label>Id</label>
+        <input
+          type="text"
+          name="idProduct"
+          placeholder="Nhập vào id sản phẩm"
+          id="inputProductId"
+        />
+        <div
+          id="nameError"
+          class="validateError"
+          style="color: red; font-size: 13px; display: none"
+        >
+          Id sản phẩm không được để trống
+        </div>
+        <label>Tên sản phẩm</label>
+        <input
+          type="text"
+          name="userProduct"
+          id="inputProductName"
+          placeholder="Nhập tên sản phẩm"
+        />
+        <div
+          id="nameError"
+          class="validateError"
+          style="color: red; font-size: 13px; display: none"
+        >
+          Tên sản phẩm không được để trống
+        </div>
+        <label>Hình ảnh sản phẩm</label>
+        <input
+          type="text"
+          name="email"
+          id="inputProductImg"
+          placeholder="Ảnh sản phẩm"
+        />
+        <div
+          id="emailError"
+          class="validateError"
+          style="color: red; font-size: 13px; display: none"
+        >
+          Ảnh sản phẩm không đúng định dạng
+        </div>
+        <label>Giá </label>
+        <input
+          type="text"
+          name="address"
+          id="inputProductPrice"
+          placeholder="Nhập giá sản phẩm"
+        />
+        <div
+          id="priceError"
+          class="validateError"
+          style="color: red; font-size: 13px; display: none"
+        >
+          Giá sản phẩm không được để trống
+        </div>
+        <button id="btnProductAdmin01" onclick="adminAddProduct()">
+          Lưu lại
+        </button>
+      </div>
+      <div class="tableUser">
+        <div class="searchTableUser">
+          <label for="">Tìm kiếm sản phẩm:</label>
+          <br />
+          <input
+            placeholder="Nhập vào id hoặc tên sản phẩm cần tìm kiếm"
+            id="nameSearch"
+            type="text"
+          />
+          <button onclick="searchUser()">search</button>
+          <br />
+          <br />
+        </div>
+        <table border="1" class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">STT</th>
+              <th scope="col">Id sản phẩm</th>
+              <th scope="col">Tên sản phẩm</th>
+              <th scope="col">Ảnh sản phẩm</th>
+              <th scope="col">Giá sản phẩm</th>
+              <th scope="col">Chức năng</th>
+            </tr>
+          </thead>
+          <tbody id="renderProduct"></tbody>
+        </table>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="../js/productAdmin.js"></script>
+  </body>
+</html>
