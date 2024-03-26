@@ -34,7 +34,7 @@
                 </form>
                </div>
               `;
-              break; // Sau khi tìm thấy sản phẩm, thoát khỏi vòng lặp
+              break;
             }else{
             element = `
               <div class="productImage">
@@ -64,7 +64,7 @@
                 </form>
                </div>
               `;
-            break; // Sau khi tìm thấy sản phẩm, thoát khỏi vòng lặp
+            break; 
             }
         }
     }
