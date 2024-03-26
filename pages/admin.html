@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="../style/admin.css" />
   </head>
   <body>
+    <!-- header -->
     <header class="header">
       <div class="adminHeader">ADMIN</div>
       <!-- <a href=""><div class="fa fa-bars" id="menu-btn"></div></a> -->
@@ -29,8 +30,8 @@
       >
 
       <nav class="navbar">
-        <a href="#home">Overview</a>
-        <a href="#features">Documentation</a>
+        <a href="#home">Người dùng</a>
+        <a href="#features">Sản phẩm</a>
         <a href="#products"
           ><ion-icon id="logoMail" name="mail-outline"></ion-icon
         ></a>
@@ -42,18 +43,9 @@
         ></a>
         <a href="#categories"><div class="fa fa-user"></div></a>
       </nav>
-      <!-- 
-      <div class="icons">
-        <div class="fa fa-search" id="search-btn"></div>
-
-        
-      </div> -->
-
-      <!-- <form class="search-form">
-        <input type="search" id="search-box" placeholder="search here....." />
-        <label for="search-box" class="fa fa-search"></label>
-      </form> -->
     </header>
+    <!-- header -->
+    <!-- navbar -->
     <navbar class="headerColumn">
       <div class="contentHeader">
         <div class="logGoTool">
@@ -81,6 +73,62 @@
         </div>
       </div>
     </navbar>
+    <!-- navbar -->
+    <!-- form user -->
+    <div class="formUser">
+      <div class="contentFormUser">Thông tin người dùng</div>
+      <label>Họ và tên</label>
+      <input type="text" name="userName" placeholder="Nhập họ và tên " />
+      <label>Email</label>
+      <input type="text" name="email" placeholder="Nhập email" />
+      <label>Địa chỉ</label>
+      <input type="text" name="address" placeholder="Nhập địa chỉ" />
+      <button>Lưu lại</button>
+    </div>
+    <div class="tableUser">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">STT</th>
+            <th scope="col">Họ và tên</th>
+            <th scope="col">Email</th>
+            <th scope="col">Địa chỉ</th>
+            <th scope="col">Chức năng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>
+              <button type="button" class="btn btn-success">Sửa</button
+              ><button type="button" class="btn btn-danger">Xóa</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+            <td>
+              <button type="button" class="btn btn-success">Sửa</button
+              ><button type="button" class="btn btn-danger">Xóa</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+            <td>
+              <button type="button" class="btn btn-success">Sửa</button
+              ><button type="button" class="btn btn-danger">Xóa</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -89,5 +137,6 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script src="../js/admin.js"></script>
   </body>
 </html>

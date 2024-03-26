@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>cart website</title>
+    <title>product detail website</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -14,7 +14,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../style/index.css" />
+    <link rel="stylesheet" href="../style/chekOut.css" />
   </head>
   <body>
     <!-- header section -->
@@ -30,31 +30,85 @@
         <a href="#review">review</a>
         <a href="#blogs">contact</a>
       </nav>
-      <form class="search-form">
-        <input type="search" id="search-box" placeholder="search here....." />
-        <label for="search-box" class="fa fa-search"></label>
+      <form class="searchForm">
+        <input type="search" id="searchBox" placeholder="search here....." />
+        <label for="searchBox" class="fa fa-search"></label>
       </form>
     </header>
-    <div class="cartContainerMain" id="cartContainerMain">
-      <div class="quantityCart">
-        <h1 id="totalCart">Giỏ hàng</h1>
-        <table id="tableCart" class="table table-success">
-          <thead>
-            <tr>
-              <th scope="col">STT</th>
-              <th scope="col">Tên</th>
-              <th scope="col">Ảnh</th>
-              <th scope="col">Giá</th>
-              <th scope="col" id="quantityCurrent">Số lượng</th>
-              <th scope="col">Thành tiền</th>
-              <th scope="col">Xóa</th>
-            </tr>
-          </thead>
-          <tbody id="bodyCart"></tbody>
-        </table>
-      </div>
-    </div>
-    <div id="tfootCart">122</div>
+    <main class="userProfile">
+      <section class="profileInfo">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h2>Thông tin người dùng</h2>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="profileDetails">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h3>Thông tin chi tiết:</h3>
+              <ul>
+                <li><strong>ID:</strong>953770376</li>
+                <li><strong>Tên người dùng:</strong>Vanh</li>
+                <li><strong>Email:</strong> test@gmail.com</li>
+                <li><strong>Địa chỉ:</strong> Ninh Binh</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="profileEdit">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h3>Sửa thông tin tài khoản</h3>
+              <form action="#" method="POST" class="editForm">
+                <div class="formGroup">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" value="John Doe" />
+                </div>
+                <div class="formGroup">
+                  <label for="email">Email:</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value="johndoe@example.com"
+                  />
+                </div>
+                <div class="formGroup">
+                  <label for="address">Address:</label>
+                  <input
+                    type="text"
+                    id="address"
+                    name="address"
+                    value="123 Main Street, City, Country"
+                  />
+                </div>
+                <div class="formGroup">
+                  <label for="phone">Phone:</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value="+1234567890"
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  Save Changes
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="tfootCart"></div>
     <section class="footer">
       <div class="box-container">
         <div class="box">
@@ -91,7 +145,6 @@
           <a href="" class="links"> <i class="fa fa-arrow-right"></i>review</a>
           <a href="" class="links"> <i class="fa fa-arrow-right"></i>blogs</a>
         </div>
-
         <div class="box">
           <h3>Newsletter</h3>
           <p>Để lại thông tin để nhận được nhiều khuyến mãi sớm nhất</p>
@@ -108,6 +161,6 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-    <script src="../js/cart.js"></script>
+    <!-- <script src="../js/detailProduct.js"></script> -->
   </body>
 </html>

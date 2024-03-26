@@ -15,10 +15,6 @@ const rePasswordError = document.getElementById("rePasswordError");
 
 //Lấy dữ liệu từ localStoragr
 const userLocal = JSON.parse(localStorage.getItem("users")) || [];
-
-
-
-
 function validateEmail(email) {
     return String(email)
       .toLowerCase()
@@ -26,18 +22,13 @@ function validateEmail(email) {
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       );
   };
-
-
-
 // lắng nghe sk dki tk
 formRegister.addEventListener("submit", function(e) {
     // Ngăn chặn sự kiện load lại trang
     e.preventDefault();
-
     //validate data
     if(!userNameElement.value) {    
         userNameError.style.display = "block";
-
     }else {
         userNameError.style.display = "none";
     }
@@ -59,11 +50,9 @@ formRegister.addEventListener("submit", function(e) {
     }
     if(!repasswordElement.value) {    
         rePasswordError.style.display = "block";
-
     }else {
         rePasswordError.style.display = "none";
     }
-
     if(passwordElement.value !== repasswordElement.value){
         
         rePasswordError.style.display = "block";
@@ -88,23 +77,15 @@ formRegister.addEventListener("submit", function(e) {
             email: emailElement.value,
             password: passwordElement.value,
             address: addressElement.value,
+            status: "true",
         };
-
         //Push user và trong userLocal
         userLocal.push(user);
-
         // Lưu trữ dữ liệu lên local
-        localStorage.setItem("users", JSON.stringify(userLocal))
-        
+        localStorage.setItem("users", JSON.stringify(userLocal));
         //Chuyển hướng về trang đăng nhập, set timeout
         setTimeout(function(){
         window.location.href = "login.html"
         },1000);
-        
-
     }
-
-    
-
-
 });

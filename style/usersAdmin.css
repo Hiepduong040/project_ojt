@@ -46,30 +46,6 @@
   width: 45px;
 }
 
-.tableUser .searchTableUser label {
-  margin-left: 0px;
-}
-
-.tableUser .searchTableUser input {
-  margin-top: 0px;
-  margin-left: 0px;
-  width: 396px;
-}
-
-.tableUser .searchTableUser button {
-  margin-top: 0px;
-  margin-left: 0px;
-}
-
-.formUser input {
-  padding-left: 10px;
-  height: 50px;
-}
-
-.tableUser table {
-  text-align: center;
-}
-
 .adminHeader {
   color: rgb(255, 255, 255);
   font-size: 20px;
@@ -95,10 +71,10 @@
 /* thông tin user */
 
 .formUser {
-  margin-top: 100px;
+  margin-top: 0100px;
 
   width: 600px;
-  height: 250px;
+  height: 50px;
   padding-bottom: 280px;
   padding-top: 10px;
   margin-left: -0px;
@@ -124,7 +100,7 @@ input {
 }
 
 #nameSearch {
-  width: 600px;
+  width: 644px;
   height: 40px;
   border-radius: 4px;
   border: 1px solid #ccc;
@@ -236,17 +212,33 @@ input {
 
 .formUser {
   margin-left: 400px;
+  margin-bottom: -300px;
 }
 .container {
   display: flex;
   justify-content: center;
 }
+
+.tableUser .searchTableUser label {
+  margin-left: 0px;
+}
+
+.tableUser .searchTableUser input {
+  margin-top: 0px;
+  margin-left: 0px;
+  width: 396px;
+}
+
+.tableUser .searchTableUser button {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
 .formUser input {
-  padding: 10px;
-  height: 40px;
-  width: 100%;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+  padding-left: 10px;
+  height: 50px;
+}
+
+.tableUser table {
+  text-align: center;
 }

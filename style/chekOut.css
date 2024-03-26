@@ -1,4 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300&display=swap");
+.cartContainerMain {
+  text-align: center;
+  margin-top: 110px;
+}
+
+#tableCart span {
+  display: flex;
+  font-size: 50px !important;
+  gap: 30px;
+  justify-content: center;
+}
+
+#tfootCart {
+  display: flex;
+  margin-left: 200px;
+  /* justify-content: end; */
+}
 
 :root {
   --green: green;
@@ -107,6 +123,10 @@ section {
   font-size: 1.7rem;
   margin: 0 1rem;
   color: var(--black);
+}
+.searchForm {
+  font-size: 17px;
+  margin-top: 20px;
 }
 
 .header .navbar a:hover {
@@ -525,11 +545,11 @@ section {
 }
 
 /* .footer .box-container .box a {
-  display: block;
-  font-size: 1.5rem;
-  color: var(--light-color);
-  padding: 1rem 0;
-} */
+    display: block;
+    font-size: 1.5rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+  } */
 
 .footer .box-container .box p {
   line-height: 1.8;
@@ -546,13 +566,13 @@ section {
 }
 
 /* .footer .box-container .box a i {
-  color: var(--green);
-  padding-right: 0.5rem;
-} */
+    color: var(--green);
+    padding-right: 0.5rem;
+  } */
 
 /* .footer .box-container .box a:hover i {
-  padding-right: 2rem;
-} */
+    padding-right: 2rem;
+  } */
 
 .footer .box-container .box .links:hover i {
   padding-right: 2rem;
@@ -593,110 +613,179 @@ section {
   width: 3rem;
   height: 3rem;
 }
-/* footer */
 
-.cartContainerMain {
-  text-align: center;
-  margin-top: 110px;
-  font-size: 15px;
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#tableCart span {
-  display: flex;
-  font-size: 15px;
-  gap: 30px;
-  justify-content: center;
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
-#tableCart span button {
-  background-color: rgb(18 244 201) !important;
-
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-#tfootCart {
-  display: flex;
-  margin-left: 1150px;
+.header {
+  background-color: #fff;
+  padding: 2rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.checkOut button {
-  font-size: 15px;
-  width: 150px;
-  height: 50px;
-  background-color: green;
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--green);
+  text-decoration: none;
+}
+
+.navbar {
+  margin-top: 1rem;
+}
+
+.navbar a {
+  font-size: 1.7rem;
+  margin-right: 1rem;
+  color: var(--black);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--green);
+}
+
+.profile-info {
+  background-color: var(--green);
   color: #fff;
-  margin-left: 177px;
-  border-radius: 9px;
+  padding: 6rem 0;
+  text-align: center;
 }
 
-/* The snackbar - position it at the bottom and in the middle of the screen */
-#snackbar {
-  visibility: hidden; /* Hidden by default. Visible on click */
-  min-width: 250px; /* Set a default minimum width */
-  margin-left: -125px; /* Divide value of min-width by 2 */
-  background-color: #4bbd0d; /* Black background color */
-  color: #fff; /* White text color */
-  text-align: center; /* Centered text */
-  border-radius: 9px; /* Rounded borders */
-  padding: 16px; /* Padding */
-  position: fixed; /* Sit on top of the screen */
-  z-index: 1; /* Add a z-index if needed */
-  left: 50%; /* Center the snackbar */
-  bottom: 30px; /* 30px from the bottom */
+.profile-info h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
 }
 
-/* Show the snackbar when clicking on a button (class added with JavaScript) */
-#snackbar.show {
-  visibility: visible; /* Show the snackbar */
-  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
-  However, delay the fade out process for 2.5 seconds */
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+.profile-info p {
+  font-size: 1.6rem;
 }
 
-/* Animations to fade the snackbar in and out */
-@-webkit-keyframes fadein {
-  from {
-    bottom: 0;
-    opacity: 0;
-  }
-  to {
-    bottom: 30px;
-    opacity: 1;
-  }
+.profile-details {
+  margin-top: 4rem;
 }
 
-@keyframes fadein {
-  from {
-    bottom: 0;
-    opacity: 0;
-  }
-  to {
-    bottom: 30px;
-    opacity: 1;
-  }
+.profile-details h3 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--black);
 }
 
-@-webkit-keyframes fadeout {
-  from {
-    bottom: 30px;
-    opacity: 1;
-  }
-  to {
-    bottom: 0;
-    opacity: 0;
-  }
+.profile-details ul {
+  list-style: none;
+  padding-left: 0;
 }
 
-@keyframes fadeout {
-  from {
-    bottom: 30px;
-    opacity: 1;
-  }
-  to {
-    bottom: 0;
-    opacity: 0;
-  }
+.profile-details ul li {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.footer {
+  background-color: #fff;
+  padding: 4rem 0;
+}
+
+.footer .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer .box {
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.footer h3 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--black);
+}
+
+.footer p {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.footer .links {
+  display: block;
+  font-size: 1.6rem;
+  color: var(--light-color);
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.footer .links:hover {
+  color: var(--black);
+}
+
+/* CSS cho phần chỉnh sửa thông tin cá nhân */
+
+.userProfile {
+  padding: 2rem;
+}
+
+.profileEdit {
+  margin-top: 2rem;
+}
+
+.profileEdit form {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profileEdit form .formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.profileEdit form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.profileEdit form input[type="text"],
+.profileEdit form input[type="email"],
+.profileEdit form input[type="tel"] {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.profileEdit form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profileEdit form button:hover {
+  background-color: #0056b3;
+}
+
+ul li {
+  list-style: none;
 }
