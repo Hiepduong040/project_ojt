@@ -2,12 +2,36 @@ function renderTableCart() {
   let users = JSON.parse(localStorage.getItem("users"));
   let checkLogin = JSON.parse(localStorage.getItem("check-login"));
   let totalBill = 0;
-  
   for (let i = 0; i < users.length; i++) {
     if (users[i].userId == checkLogin) {
       let element = "";
       for (let j = 0; j < users[i].cart.length; j++) {
-        element += `
+        if(users[i].cart[j].image.includes("data:image")||users[i].cart[j].image.includes("http")){
+          element += `
+          <tr >
+            <td style="vertical-align: middle;" scope="row"> <b>${j + 1}</b></td>
+            <td style="vertical-align: middle;">${users[i].cart[j].name}</td>
+            <td style="vertical-align: middle;">
+              <img
+                style="width: 50px; height: 50px"
+                src="${users[i].cart[j].image}"
+                alt=""
+              />
+            </td>
+            <td style="vertical-align: middle;">${users[i].cart[j].price}.000 VNĐ</td>
+            <td style="vertical-align: middle;">
+              <span>
+                <button onclick="increaseQuantityCart(${users[i].cart[j].id})">+</button>
+                ${users[i].cart[j].quantity}
+                <button onclick="reduceQuantityCart(${users[i].cart[j].id})">-</button>
+              </span>
+            </td>
+            <td style="vertical-align: middle;">${users[i].cart[j].totalPrice}.000 VNĐ</td>
+            <td style="vertical-align: middle;"><button style="background-color: var(--bs-table-bg);" onclick="deleteProductCart(${users[i].cart[j].id})"><ion-icon style="color:red;" name="trash-outline" ></ion-icon></button></td>
+          </tr>
+        `;
+        }else{
+          element += `
           <tr >
             <td style="vertical-align: middle;" scope="row"> <b>${j + 1}</b></td>
             <td style="vertical-align: middle;">${users[i].cart[j].name}</td>
@@ -30,16 +54,23 @@ function renderTableCart() {
             <td style="vertical-align: middle;"><button style="background-color: var(--bs-table-bg);" onclick="deleteProductCart(${users[i].cart[j].id})"><ion-icon style="color:red;" name="trash-outline" ></ion-icon></button></td>
           </tr>
         `;
+        }
+        
         totalBill += users[i].cart[j].totalPrice;
-      }
-      
-      document.getElementById("bodyCart").innerHTML = element;
-      
+      }   
+      document.getElementById("bodyCart").innerHTML = element;   
       let elements = `
+      <div class="containerCheckOut">
         <h3>Tổng bill của bạn là: <span>${totalBill}.000 VNĐ</span></h3>
+        <a href="../pages/checkOut.html">
+          <div class="checkOut">
+            <button>Thanh toán</button>
+          </div></a> 
+        
+      </div>
+        
       `;
       document.getElementById("tfootCart").innerHTML = elements;
-      
       break; // Thoát khỏi vòng lặp vì đã tìm thấy người dùng
     }
   }
@@ -48,7 +79,6 @@ function renderTableCart() {
 function reduceQuantityCart(idItem) {
   let users = JSON.parse(localStorage.getItem("users"));
   let checkLogin = JSON.parse(localStorage.getItem("check-login"));
-  
   for (let i = 0; i < users.length; i++) {
     if (users[i].userId == checkLogin) {
       for (let j = 0; j < users[i].cart.length; j++) {
@@ -108,9 +138,6 @@ function tableBill() {
 }
 tableBill();
 
-
-
-
 function deleteProductCart(idItem) {
   let users = JSON.parse(localStorage.getItem("users"));
   let checkLogin = JSON.parse(localStorage.getItem("check-login"));
@@ -124,8 +151,6 @@ function deleteProductCart(idItem) {
           
           localStorage.setItem("users", JSON.stringify(users));
           renderTableCart();
-            
-          
         }
       }
     }

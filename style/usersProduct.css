@@ -9,6 +9,21 @@
   margin-left: 600px;
   margin-top: 15px;
 }
+.inputProductMain {
+  margin-left: -360px;
+  margin-right: 360px;
+}
+
+.inputProductDetail {
+  margin-left: 300px;
+  margin-top: -280px;
+  margin-right: -300px;
+}
+
+#btnProductAdmin01 {
+  margin-left: 205px;
+  margin-top: 20px;
+}
 
 .header {
   display: flex;
@@ -59,6 +74,7 @@
 .tableUser .searchTableUser button {
   margin-top: 0px;
   margin-left: 0px;
+  border: 1px solid #ccc;
 }
 
 .formUser input {
@@ -190,6 +206,11 @@ input {
 .tableUser table {
   background-color: #f1f1f1;
   color: #333;
+}
+
+#btnProductAdminColor {
+  background-color: #f1f1f1d2;
+  color: #000000;
 }
 
 .tableUser th,

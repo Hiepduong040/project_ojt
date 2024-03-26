@@ -9,6 +9,15 @@
   margin-left: 600px;
   margin-top: 15px;
 }
+.inputProductMain {
+  margin-left: -65px;
+  margin-right: -70px;
+}
+
+#btnProductAdmin01 {
+  margin-left: 230px;
+  margin-top: 20px;
+}
 
 .header {
   display: flex;
@@ -59,6 +68,7 @@
 .tableUser .searchTableUser button {
   margin-top: 0px;
   margin-left: 0px;
+  border: 1px solid #ccc;
 }
 
 .formUser input {
@@ -119,10 +129,6 @@ input {
   padding-left: -400px !important;
 }
 
-.formUser .contentFormUser {
-  margin-left: 195px;
-}
-
 #nameSearch {
   width: 600px;
   height: 40px;
@@ -154,12 +160,35 @@ input {
 .tableUser {
   width: 800px;
   margin-left: 333px;
-  margin-top: 110px;
+  margin-top: 180px;
 }
 
 .buttonActive {
   display: flex;
   gap: 5px;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300&display=swap");
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .header {
+    padding: 2rem;
+  }
+  section {
+    padding: 2rem 9%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header .navbar {
+    position: absolute;
+    top: 110%;
+    right: 2rem;
+    width: 30rem;
+    box-shadow: var(--box-shadow);
+  }
 }
 
 .buttonActive #updateProduct {
@@ -192,6 +221,11 @@ input {
   color: #333;
 }
 
+#btnProductAdminColor {
+  background-color: #f1f1f1d2;
+  color: #000000;
+}
+
 .tableUser th,
 .tableUser td {
   background-color: #fff;
@@ -221,6 +255,7 @@ input {
 }
 .formUser .contentFormUser {
   font-size: 20px;
+  margin-left: 260px;
 }
 .formUser input,
 .formUser label {

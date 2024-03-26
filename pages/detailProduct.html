@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>cart website</title>
+    <title>product detail website</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -14,7 +14,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../style/index.css" />
+    <link rel="stylesheet" href="../style/productDetailUser.css" />
   </head>
   <body>
     <!-- header section -->
@@ -25,7 +25,7 @@
       <nav class="navbar">
         <a href="#home">home</a>
         <a href="#features">features</a>
-        <a href="#products">products</a>
+        <a href="#products" style="color: green">products</a>
         <a href="#categories">categories</a>
         <a href="#review">review</a>
         <a href="#blogs">contact</a>
@@ -35,26 +35,37 @@
         <label for="search-box" class="fa fa-search"></label>
       </form>
     </header>
-    <div class="cartContainerMain" id="cartContainerMain">
-      <div class="quantityCart">
-        <h1 id="totalCart">Giỏ hàng</h1>
-        <table id="tableCart" class="table table-success">
-          <thead>
-            <tr>
-              <th scope="col">STT</th>
-              <th scope="col">Tên</th>
-              <th scope="col">Ảnh</th>
-              <th scope="col">Giá</th>
-              <th scope="col" id="quantityCurrent">Số lượng</th>
-              <th scope="col">Thành tiền</th>
-              <th scope="col">Xóa</th>
-            </tr>
-          </thead>
-          <tbody id="bodyCart"></tbody>
-        </table>
+
+    <section id="productDetail" class="productDetail">
+      <!-- <div class="productImage">
+        <img
+          src="https://cdn.tgdd.vn/Products/Images/8788/270325/bhx/dua-hau-do-trai-18kg-tro-len-202308190821225026.png"
+          alt=""
+        />
       </div>
-    </div>
-    <div id="tfootCart">122</div>
+      <div class="producInfo" id="producInfo">
+        <h2>Dưa lưới tròn ruột cam túi 1 trái</h2>
+        <p class="price">Giá: 150.000 VND</p>
+        <p class="description">
+          Dưa lưới tròn ruột cam túi 1 trái, trọng lượng từ 1.1kg trở lên.
+        </p>
+        <form id="productForm">
+          <label for="quantity">Số lượng:</label>
+          <input
+            type="number"
+            id="quantityProduct"
+            name="quantity"
+            min="1"
+            value="1"
+          />
+          <a href="../pages/cart.html"
+            ><button type="submit">Thêm vào giỏ hàng</button></a
+          >
+        </form>
+      </div> -->
+    </section>
+
+    <div id="tfootCart"></div>
     <section class="footer">
       <div class="box-container">
         <div class="box">
@@ -91,7 +102,6 @@
           <a href="" class="links"> <i class="fa fa-arrow-right"></i>review</a>
           <a href="" class="links"> <i class="fa fa-arrow-right"></i>blogs</a>
         </div>
-
         <div class="box">
           <h3>Newsletter</h3>
           <p>Để lại thông tin để nhận được nhiều khuyến mãi sớm nhất</p>
@@ -108,6 +118,6 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-    <script src="../js/cart.js"></script>
+    <script src="../js/detailProduct.js"></script>
   </body>
 </html>
